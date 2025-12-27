@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoPulse - Earth's Digital Twin | Real-Time Environmental Monitoring</title>
+  <meta name="description" content="EcoPulse uses AI, satellite imagery, and IoT sensors to monitor our planet's vital signs. The Earth's digital twin for researchers, governments, and activists.">
+  <meta name="keywords" content="environment, AI, machine learning, climate, monitoring, satellites, earth, ecology">
+  
+  <meta property="og:title" content="EcoPulse - Earth's Digital Twin">
+  <meta property="og:description" content="Real-time environmental monitoring powered by AI and machine learning">
+  <meta property="og:type" content="website">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav-container">
+      <a href="#home" class="nav-logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+        </svg>
+        <span>ECO<span class="text-primary">PULSE</span></span>
+      </a>
+      
+      <div class="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#vitals" class="nav-link">Earth Vitals</a>
+        <a href="#ai" class="nav-link">AI & Nature</a>
+        <a href="#action" class="nav-link">Action Hub</a>
+        <a href="#about" class="nav-link">About</a>
+      </div>
+      
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#home" onclick="closeMobileMenu()">Home</a>
+      <a href="#vitals" onclick="closeMobileMenu()">Earth Vitals</a>
+      <a href="#ai" onclick="closeMobileMenu()">AI & Nature</a>
+      <a href="#action" onclick="closeMobileMenu()">Action Hub</a>
+      <a href="#about" onclick="closeMobileMenu()">About</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero data-grid">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="badge">Real-Time Environmental Monitoring</span>
+        <h1 class="hero-title">
+          The Earth is <span class="text-primary glow-text">Alive</span><br>
+          and We Are <span class="text-accent">Listening</span>
+        </h1>
+        <p class="hero-subtitle">
+          EcoPulse uses AI, satellite imagery, and IoT sensors to monitor our planet's vital signs. 
+          The Earth's digital twin for researchers, governments, and activists.
+        </p>
+        <div class="hero-buttons">
+          <a href="#vitals" class="btn btn-primary">
+            View Earth Vitals
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#ai" class="btn btn-secondary">Explore AI Tech</a>
+        </div>
+      </div>
+      
+      <div class="pulse-orb-container">
+        <div class="pulse-orb">
+          <div class="pulse-orb-ring"></div>
+          <div class="pulse-orb-ring"></div>
+          <div class="pulse-orb-ring"></div>
+          <div class="pulse-orb-core">
+            <img src="earth pulse.png" alt="Earth Pulse" class="earth-image">
+          </div>
+          <div class="pulse-orb-scan"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="scroll-indicator">
+      <div class="scroll-indicator-inner">
+        <div class="scroll-indicator-dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Real-Time <span class="text-primary">Global Metrics</span></h2>
+        <p class="section-subtitle">Our neural networks process environmental data from thousands of sources to give you an accurate picture of Earth's health.</p>
+      </div>
+      
+      <div class="stats-grid">
+        <div class="glass-card stat-card accent">
+          <div class="stat-card-header">
+            <div class="stat-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <span class="stat-trend down">↓ 0.5% this year</span>
+          </div>
+          <p class="stat-label">Forest Coverage</p>
+          <p class="stat-value">31.2%</p>
+        </div>
+        
+        <div class="glass-card stat-card warning">
+          <div class="stat-card-header">
+            <div class="stat-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 12c2-4 6-8 10-8s8 4 10 8-6 8-10 8-8-4-10-8"/>
+              </svg>
+            </div>
+            <span class="stat-trend up">↑ above baseline</span>
+          </div>
+          <p class="stat-label">Ocean Temperature</p>
+          <p class="stat-value">+1.2°C</p>
+        </div>
+        
+        <div class="glass-card stat-card destructive">
+          <div class="stat-card-header">
+            <div class="stat-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+              </svg>
+            </div>
+            <span class="stat-trend up">↑ 2.5 ppm/year</span>
+          </div>
+          <p class="stat-label">CO₂ Levels</p>
+          <p class="stat-value">421 ppm</p>
+        </div>
+        
+        <div class="glass-card stat-card">
+          <div class="stat-card-header">
+            <div class="stat-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </div>
+            <span class="stat-trend" style="color: var(--muted)">→ worldwide</span>
+          </div>
+          <p class="stat-label">Active Sensors</p>
+          <p class="stat-value">12,847</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="container">
+      <div class="features-grid">
+        <div class="glass-card feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Satellite Imagery</h3>
+          <p class="feature-desc">Process terabytes of satellite data daily using advanced computer vision algorithms.</p>
+        </div>
+        
+        <div class="glass-card feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2a9 9 0 0 0-9 9c0 3.6 2.4 6.6 6 7.7V22l3-3 3 3v-3.3c3.6-1.1 6-4.1 6-7.7a9 9 0 0 0-9-9z"/>
+              <circle cx="9" cy="10" r="1"/>
+              <circle cx="15" cy="10" r="1"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Neural Networks</h3>
+          <p class="feature-desc">Our AI models predict environmental changes with unprecedented accuracy.</p>
+        </div>
+        
+        <div class="glass-card feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Real-Time Alerts</h3>
+          <p class="feature-desc">Instant notifications for environmental anomalies and critical thresholds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Earth Vitals Section -->
+  <section id="vitals" class="vitals-section data-grid">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Live Dashboard</span>
+        <h2 class="section-title">Earth Vitals Monitor</h2>
+        <p class="section-subtitle">Real-time environmental metrics processed through our neural network infrastructure. Data updated every 15 minutes from 12,847 sensors worldwide.</p>
+      </div>
+      
+      <!-- Health Score Card -->
+      <div class="glass-card health-card">
+        <div class="health-content">
+          <div class="health-alert">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+              <line x1="12" y1="9" x2="12" y2="13"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            System Alert
+          </div>
+          <h3 class="health-title">Planetary Health Index</h3>
+          <p class="health-desc">Our AI aggregates all environmental metrics into a single health score. The current index shows moderate stress across multiple ecosystems.</p>
+          <div class="health-tags">
+            <span class="health-tag normal">2 Metrics Normal</span>
+            <span class="health-tag warning">2 Metrics Warning</span>
+            <span class="health-tag critical">2 Metrics Critical</span>
+          </div>
+        </div>
+        <div class="progress-ring-container">
+          <svg class="progress-ring" width="180" height="180" viewBox="0 0 180 180">
+            <circle class="progress-ring-bg" cx="90" cy="90" r="70"/>
+            <circle class="progress-ring-progress" cx="90" cy="90" r="70"/>
+          </svg>
+          <div class="progress-ring-text">
+            <span class="progress-ring-value">62%</span>
+            <span class="progress-ring-label">Health Score</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Vitals Grid -->
+      <div class="vitals-grid">
+        <div class="glass-card vital-card">
+          <div class="vital-card-header">
+            <div class="vital-icon destructive">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <span class="vital-change text-accent">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/>
+                <polyline points="17 18 23 18 23 12"/>
+              </svg>
+              -0.5%
+            </span>
+          </div>
+          <h4 class="vital-title">Global Forest Cover</h4>
+          <div class="vital-value-row">
+            <span class="vital-value">31.2</span>
+            <span class="vital-unit">%</span>
+          </div>
+          <p class="vital-desc">Forest coverage has decreased by 420 million hectares since 1990.</p>
+          <div class="vital-progress">
+            <div class="vital-progress-header">
+              <span>Current</span>
+              <span>Target: 35%</span>
+            </div>
+            <div class="vital-progress-bar">
+              <div class="vital-progress-fill destructive" style="width: 89%"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="glass-card vital-card">
+          <div class="vital-card-header">
+            <div class="vital-icon warning">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 12c2-4 6-8 10-8s8 4 10 8-6 8-10 8-8-4-10-8"/>
+              </svg>
+            </div>
+            <span class="vital-change text-accent">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/>
+                <polyline points="17 18 23 18 23 12"/>
+              </svg>
+              -0.02pH
+            </span>
+          </div>
+          <h4 class="vital-title">Ocean Acidification</h4>
+          <div class="vital-value-row">
+            <span class="vital-value">8.1</span>
+            <span class="vital-unit">pH</span>
+          </div>
+          <p class="vital-desc">Ocean pH continues to drop as CO₂ absorption increases.</p>
+          <div class="vital-progress">
+            <div class="vital-progress-header">
+              <span>Current</span>
+              <span>Target: 8.2 pH</span>
+            </div>
+            <div class="vital-progress-bar">
+              <div class="vital-progress-fill warning" style="width: 95%"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="glass-card vital-card">
+          <div class="vital-card-header">
+            <div class="vital-icon destructive">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/>
+                <path d="M9.6 4.6A2 2 0 1 1 11 8H2"/>
+                <path d="M12.6 19.4A2 2 0 1 0 14 16H2"/>
+              </svg>
+            </div>
+            <span class="vital-change text-destructive">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                <polyline points="17 6 23 6 23 12"/>
+              </svg>
+              +2.5ppm
+            </span>
+          </div>
+          <h4 class="vital-title">Carbon Dioxide</h4>
+          <div class="vital-value-row">
+            <span class="vital-value">421</span>
+            <span class="vital-unit">ppm</span>
+          </div>
+          <p class="vital-desc">CO₂ levels are the highest in 3 million years.</p>
+          <div class="vital-progress">
+            <div class="vital-progress-header">
+              <span>Current</span>
+              <span>Target: 350 ppm</span>
+            </div>
+            <div class="vital-progress-bar">
+              <div class="vital-progress-fill destructive" style="width: 100%"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="glass-card vital-card">
+          <div class="vital-card-header">
+            <div class="vital-icon warning">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/>
+              </svg>
+            </div>
+            <span class="vital-change text-destructive">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                <polyline points="17 6 23 6 23 12"/>
+              </svg>
+              +0.1°C
+            </span>
+          </div>
+          <h4 class="vital-title">Global Temperature</h4>
+          <div class="vital-value-row">
+            <span class="vital-value">1.2</span>
+            <span class="vital-unit">°C</span>
+          </div>
+          <p class="vital-desc">Above pre-industrial average (1850-1900).</p>
+          <div class="vital-progress">
+            <div class="vital-progress-header">
+              <span>Current</span>
+              <span>Target: 1.5°C</span>
+            </div>
+            <div class="vital-progress-bar">
+              <div class="vital-progress-fill warning" style="width: 80%"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="glass-card vital-card">
+          <div class="vital-card-header">
+            <div class="vital-icon warning">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+              </svg>
+            </div>
+            <span class="vital-change text-destructive">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                <polyline points="17 6 23 6 23 12"/>
+              </svg>
+              +0.3mm/yr
+            </span>
+          </div>
+          <h4 class="vital-title">Sea Level Rise</h4>
+          <div class="vital-value-row">
+            <span class="vital-value">3.4</span>
+            <span class="vital-unit">mm/yr</span>
+          </div>
+          <p class="vital-desc">Rate of rise continues to accelerate since 1993.</p>
+          <div class="vital-progress">
+            <div class="vital-progress-header">
+              <span>Current Rate</span>
+              <span>Target: 0 mm/yr</span>
+            </div>
+            <div class="vital-progress-bar">
+              <div class="vital-progress-fill warning" style="width: 100%"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="glass-card vital-card">
+          <div class="vital-card-header">
+            <div class="vital-icon destructive">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 3v4l-4 2v8h4l4 4 4-4h4v-8l-4-2V3"/>
+              </svg>
+            </div>
+            <span class="vital-change text-destructive">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                <polyline points="17 6 23 6 23 12"/>
+              </svg>
+              +12 Gt/yr
+            </span>
+          </div>
+          <h4 class="vital-title">Glacier Mass Loss</h4>
+          <div class="vital-value-row">
+            <span class="vital-value">267</span>
+            <span class="vital-unit">Gt/yr</span>
+          </div>
+          <p class="vital-desc">Annual ice loss from glaciers worldwide.</p>
+          <div class="vital-progress">
+            <div class="vital-progress-header">
+              <span>Current Loss</span>
+              <span>Target: 0 Gt/yr</span>
+            </div>
+            <div class="vital-progress-bar">
+              <div class="vital-progress-fill destructive" style="width: 100%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Feed Section -->
+  <section class="live-feed-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Live Feed</span>
+        <h2 class="section-title">Data Stream</h2>
+        <p class="section-subtitle">Real-time updates from our global sensor network</p>
+      </div>
+      
+      <div class="glass-card live-feed">
+        <div class="feed-entry">
+          <span class="feed-time">[14:32:01]</span>
+          <span class="feed-source">SAT-7842</span>
+          <span class="feed-msg">Forest coverage update - Amazon Basin: -0.003%</span>
+        </div>
+        <div class="feed-entry">
+          <span class="feed-time">[14:32:00]</span>
+          <span class="feed-source">BUOY-221</span>
+          <span class="feed-msg">Ocean temp anomaly detected - Pacific: +0.8°C</span>
+        </div>
+        <div class="feed-entry">
+          <span class="feed-time">[14:31:58]</span>
+          <span class="feed-source">STATION-19</span>
+          <span class="feed-msg">CO₂ reading confirmed - Mauna Loa: 421.3 ppm</span>
+        </div>
+        <div class="feed-entry">
+          <span class="feed-time">[14:31:55]</span>
+          <span class="feed-source">SAT-3291</span>
+          <span class="feed-msg">Ice mass update - Greenland: -2.1 Gt</span>
+        </div>
+        <div class="feed-entry">
+          <span class="feed-time">[14:31:52]</span>
+          <span class="feed-source">SENSOR-442</span>
+          <span class="feed-msg">Air quality index - Beijing: 142 AQI</span>
+        </div>
+        <div class="feed-entry">
+          <span class="feed-time">[14:31:50]</span>
+          <span class="feed-source">BUOY-087</span>
+          <span class="feed-msg">Sea level measurement - Miami: +3.2mm</span>
+        </div>
+        <div class="feed-status">
+          <span class="feed-dot"></span>
+          Streaming live data...
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Section -->
+  <section id="ai" class="ai-section data-grid">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Technology</span>
+        <h2 class="section-title">AI & Nature</h2>
+        <p class="section-subtitle">Discover how we leverage cutting-edge machine learning and artificial intelligence to monitor, analyze, and protect our planet's ecosystems.</p>
+      </div>
+      
+      <!-- AI Hero Card -->
+      <div class="glass-card ai-hero-card">
+        <div>
+          <div class="ai-badge">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2a9 9 0 0 0-9 9c0 3.6 2.4 6.6 6 7.7V22l3-3 3 3v-3.3c3.6-1.1 6-4.1 6-7.7a9 9 0 0 0-9-9z"/>
+            </svg>
+            Neural Architecture
+          </div>
+          <h3 class="health-title">The Brain Behind EcoPulse</h3>
+          <p class="health-desc">Our system employs a multi-modal deep learning architecture that processes diverse data streams—satellite imagery, sensor readings, audio, and text—through specialized neural networks that work in concert.</p>
+          <ul class="ai-list">
+            <li>ResNet-152 for satellite image analysis</li>
+            <li>LSTM for time-series environmental data</li>
+            <li>BERT for research paper analysis</li>
+            <li>Graph Attention Networks for ecosystem modeling</li>
+          </ul>
+        </div>
+        <div class="neural-visual">
+          <div class="neural-ring"></div>
+          <div class="neural-ring"></div>
+          <div class="neural-ring"></div>
+          <div class="neural-core">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2a9 9 0 0 0-9 9c0 3.6 2.4 6.6 6 7.7V22l3-3 3 3v-3.3c3.6-1.1 6-4.1 6-7.7a9 9 0 0 0-9-9z"/>
+            </svg>
+          </div>
+          <div class="neural-node" style="top: 20%; left: 20%;"></div>
+          <div class="neural-node" style="top: 30%; right: 25%; animation-delay: 0.5s;"></div>
+          <div class="neural-node" style="bottom: 25%; left: 30%; animation-delay: 1s;"></div>
+          <div class="neural-node" style="bottom: 35%; right: 20%; animation-delay: 1.5s;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pipeline Section -->
+  <section class="pipeline-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Process</span>
+        <h2 class="section-title">Data Pipeline</h2>
+        <p class="section-subtitle">From raw environmental data to actionable insights</p>
+      </div>
+      
+      <div class="pipeline-grid">
+        <div class="pipeline-line"></div>
+        
+        <div class="glass-card pipeline-step">
+          <div class="pipeline-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <ellipse cx="12" cy="5" rx="9" ry="3"/>
+              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+            </svg>
+          </div>
+          <p class="pipeline-label">Data Collection</p>
+          <p class="pipeline-desc">Satellites, IoT sensors, drones</p>
+        </div>
+        
+        <div class="glass-card pipeline-step">
+          <div class="pipeline-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="4" y="4" width="16" height="16" rx="2" ry="2"/>
+              <rect x="9" y="9" width="6" height="6"/>
+              <line x1="9" y1="1" x2="9" y2="4"/>
+              <line x1="15" y1="1" x2="15" y2="4"/>
+              <line x1="9" y1="20" x2="9" y2="23"/>
+              <line x1="15" y1="20" x2="15" y2="23"/>
+            </svg>
+          </div>
+          <p class="pipeline-label">Preprocessing</p>
+          <p class="pipeline-desc">Cleaning, normalization, feature extraction</p>
+        </div>
+        
+        <div class="glass-card pipeline-step">
+          <div class="pipeline-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2a9 9 0 0 0-9 9c0 3.6 2.4 6.6 6 7.7V22l3-3 3 3v-3.3c3.6-1.1 6-4.1 6-7.7a9 9 0 0 0-9-9z"/>
+            </svg>
+          </div>
+          <p class="pipeline-label">ML Models</p>
+          <p class="pipeline-desc">CNN, LSTM, Transformers, GNN</p>
+        </div>
+        
+        <div class="glass-card pipeline-step">
+          <div class="pipeline-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+          </div>
+          <p class="pipeline-label">Real-time Inference</p>
+          <p class="pipeline-desc">Edge computing, cloud processing</p>
+        </div>
+        
+        <div class="glass-card pipeline-step">
+          <div class="pipeline-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+            </svg>
+          </div>
+          <p class="pipeline-label">Visualization</p>
+          <p class="pipeline-desc">Dashboards, alerts, reports</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Cards Section -->
+  <section class="tech-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Capabilities</span>
+        <h2 class="section-title">AI Technologies</h2>
+        <p class="section-subtitle">The machine learning models powering our environmental monitoring</p>
+      </div>
+      
+      <div class="tech-grid">
+        <div class="glass-card tech-card">
+          <div class="tech-header">
+            <div class="tech-icon primary">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </div>
+            <div>
+              <p class="tech-subtitle">Species Identification</p>
+              <h4 class="tech-title">Computer Vision</h4>
+            </div>
+          </div>
+          <p class="tech-desc">Our convolutional neural networks (CNNs) analyze satellite imagery and camera trap footage to identify and track endangered species with 97.3% accuracy.</p>
+          <div class="tech-stats">
+            <div class="tech-stat">
+              <p class="tech-stat-value">12,400+</p>
+              <p class="tech-stat-label">Species Tracked</p>
+            </div>
+            <div class="tech-stat">
+              <p class="tech-stat-value">97.3%</p>
+              <p class="tech-stat-label">Accuracy Rate</p>
+            </div>
+            <div class="tech-stat">
+              <p class="tech-stat-value">2.1B</p>
+              <p class="tech-stat-label">Images Processed</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="glass-card tech-card">
+          <div class="tech-header">
+            <div class="tech-icon warning">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="20" x2="18" y2="10"/>
+                <line x1="12" y1="20" x2="12" y2="4"/>
+                <line x1="6" y1="20" x2="6" y2="14"/>
+              </svg>
+            </div>
+            <div>
+              <p class="tech-subtitle">Wildfire Forecasting</p>
+              <h4 class="tech-title">Predictive Modeling</h4>
+            </div>
+          </div>
+          <p class="tech-desc">Long Short-Term Memory (LSTM) networks analyze climate patterns, vegetation data, and historical records to predict wildfire risks 72 hours in advance.</p>
+          <div class="tech-stats">
+            <div class="tech-stat">
+              <p class="tech-stat-value">72 hrs</p>
+              <p class="tech-stat-label">Prediction Window</p>
+            </div>
+            <div class="tech-stat">
+              <p class="tech-stat-value">3,200+</p>
+              <p class="tech-stat-label">Early Warnings</p>
+            </div>
+            <div class="tech-stat">
+              <p class="tech-stat-value">1.2M</p>
+              <p class="tech-stat-label">Lives Protected</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="glass-card tech-card">
+          <div class="tech-header">
+            <div class="tech-icon accent">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2a9 9 0 0 0-9 9c0 3.6 2.4 6.6 6 7.7V22l3-3 3 3v-3.3c3.6-1.1 6-4.1 6-7.7a9 9 0 0 0-9-9z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="tech-subtitle">Environmental Sound Analysis</p>
+              <h4 class="tech-title">Natural Language Processing</h4>
+            </div>
+          </div>
+          <p class="tech-desc">Transformer models process audio from rainforest sensors to detect illegal logging, poaching activities, and monitor ecosystem health through biodiversity sounds.</p>
+          <div class="tech-stats">
+            <div class="tech-stat">
+              <p class="tech-stat-value">8.4M</p>
+              <p class="tech-stat-label">Audio Hours</p>
+            </div>
+            <div class="tech-stat">
+              <p class="tech-stat-value">45K</p>
+              <p class="tech-stat-label">Alerts Generated</p>
+            </div>
+            <div class="tech-stat">
+              <p class="tech-stat-value">2,100</p>
+              <p class="tech-stat-label">Sensors Active</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="glass-card tech-card">
+          <div class="tech-header">
+            <div class="tech-icon primary">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="5" r="3"/>
+                <circle cx="5" cy="19" r="3"/>
+                <circle cx="19" cy="19" r="3"/>
+                <line x1="12" y1="8" x2="5" y2="16"/>
+                <line x1="12" y1="8" x2="19" y2="16"/>
+              </svg>
+            </div>
+            <div>
+              <p class="tech-subtitle">Ecosystem Mapping</p>
+              <h4 class="tech-title">Graph Neural Networks</h4>
+            </div>
+          </div>
+          <p class="tech-desc">GNNs model complex relationships between species, climate factors, and geographical features to understand and predict ecosystem dynamics.</p>
+          <div class="tech-stats">
+            <div class="tech-stat">
+              <p class="tech-stat-value">847</p>
+              <p class="tech-stat-label">Ecosystems Mapped</p>
+            </div>
+            <div class="tech-stat">
+              <p class="tech-stat-value">12M+</p>
+              <p class="tech-stat-label">Connections Analyzed</p>
+            </div>
+            <div class="tech-stat">
+              <p class="tech-stat-value">890K</p>
+              <p class="tech-stat-label">Predictions Made</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Code Section -->
+  <section class="code-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">API</span>
+        <h2 class="section-title">Developer Access</h2>
+        <p class="section-subtitle">Integrate EcoPulse data into your applications</p>
+      </div>
+      
+      <div class="code-block" style="max-width: 800px; margin: 0 auto;">
+        <div class="code-header">
+          <span class="code-dot red"></span>
+          <span class="code-dot yellow"></span>
+          <span class="code-dot green"></span>
+          <span class="code-filename">api-example.py</span>
+        </div>
+        <div class="code-content">
+<pre><span class="code-keyword">import</span> ecopulse
+
+<span class="code-comment"># Initialize the API client</span>
+client = ecopulse.<span class="code-function">Client</span>(api_key=<span class="code-string">"your_api_key"</span>)
+
+<span class="code-comment"># Get real-time forest coverage data</span>
+forest_data = client.vitals.<span class="code-function">get</span>(
+    metric=<span class="code-string">"forest_coverage"</span>,
+    region=<span class="code-string">"amazon_basin"</span>,
+    timeframe=<span class="code-string">"realtime"</span>
+)
+
+<span class="code-comment"># Predict wildfire risk using ML model</span>
+wildfire_risk = client.predict.<span class="code-function">wildfire</span>(
+    coordinates=(lat, lng),
+    horizon_hours=<span class="code-keyword">72</span>
+)
+
+<span class="code-comment"># Stream sensor data</span>
+<span class="code-keyword">for</span> reading <span class="code-keyword">in</span> client.stream.<span class="code-function">sensors</span>(region=<span class="code-string">"pacific"</span>):
+    <span class="code-function">print</span>(<span class="code-string">f"Sensor {reading.id}: {reading.value}"</span>)</pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Action Section -->
+  <section id="action" class="action-section data-grid">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Take Action</span>
+        <h2 class="section-title">Action Hub</h2>
+        <p class="section-subtitle">Data without action is just numbers. Join thousands of people using EcoPulse insights to create real environmental change.</p>
+      </div>
+      
+      <!-- Impact Stats -->
+      <div class="impact-grid">
+        <div class="glass-card impact-card">
+          <div class="impact-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <p class="impact-value">2.4M</p>
+          <p class="impact-label">Trees Planted</p>
+        </div>
+        
+        <div class="glass-card impact-card">
+          <div class="impact-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </div>
+          <p class="impact-value">847</p>
+          <p class="impact-label">Partners Worldwide</p>
+        </div>
+        
+        <div class="glass-card impact-card">
+          <div class="impact-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <p class="impact-value">12K</p>
+          <p class="impact-label">Active Contributors</p>
+        </div>
+        
+        <div class="glass-card impact-card">
+          <div class="impact-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+          </div>
+          <p class="impact-value">156</p>
+          <p class="impact-label">Research Projects</p>
+        </div>
+      </div>
+      
+      <!-- Action Cards -->
+      <div class="action-grid">
+        <div class="glass-card action-card">
+          <div class="action-icon primary">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <ellipse cx="12" cy="5" rx="9" ry="3"/>
+              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+            </svg>
+          </div>
+          <h3 class="action-title">Contribute Data</h3>
+          <p class="action-desc">Help expand our sensor network by contributing environmental readings from your area. Every data point strengthens our models.</p>
+          <ul class="action-features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+              Upload sensor data
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+              Share local observations
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+              Validate existing readings
+            </li>
+          </ul>
+          <button class="action-btn primary">
+            Start Contributing
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </button>
+        </div>
+        
+        <div class="glass-card action-card">
+          <div class="action-icon accent">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+          <h3 class="action-title">Support Research</h3>
+          <p class="action-desc">Fund the deployment of new sensors, satellite imagery access, and the computational resources needed to run our AI models.</p>
+          <ul class="action-features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+              Fund new sensors
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+              Support AI development
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+              Enable research grants
+            </li>
+          </ul>
+          <button class="action-btn accent">
+            Donate Now
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </button>
+        </div>
+        
+        <div class="glass-card action-card">
+          <div class="action-icon warning">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3 class="action-title">Join Community</h3>
+          <p class="action-desc">Connect with researchers, activists, and concerned citizens. Share insights, collaborate on projects, and amplify impact.</p>
+          <ul class="action-features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+              Discussion forums
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+              Local chapters
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+              Expert webinars
+            </li>
+          </ul>
+          <button class="action-btn warning">
+            Join Network
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Missions Section -->
+  <section class="missions-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Current Campaigns</span>
+        <h2 class="section-title">Active Missions</h2>
+        <p class="section-subtitle">Support ongoing environmental initiatives powered by EcoPulse data</p>
+      </div>
+      
+      <div class="missions-grid">
+        <div class="glass-card mission-card">
+          <h4 class="mission-title">Protect Rainforests</h4>
+          <p class="mission-goal">Prevent 1M hectares of deforestation</p>
+          <div class="mission-progress-header">
+            <span class="mission-raised">$2.4M</span>
+            <span class="mission-target">$3M</span>
+          </div>
+          <div class="mission-progress-bar">
+            <div class="mission-progress-fill" style="width: 78%"></div>
+          </div>
+          <div class="mission-footer">
+            <span class="mission-percent">78% funded</span>
+            <a href="#" class="mission-link">
+              Support
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="glass-card mission-card">
+          <h4 class="mission-title">Ocean Cleanup</h4>
+          <p class="mission-goal">Remove 500 tons of ocean plastic</p>
+          <div class="mission-progress-header">
+            <span class="mission-raised">$890K</span>
+            <span class="mission-target">$2M</span>
+          </div>
+          <div class="mission-progress-bar">
+            <div class="mission-progress-fill" style="width: 45%"></div>
+          </div>
+          <div class="mission-footer">
+            <span class="mission-percent">45% funded</span>
+            <a href="#" class="mission-link">
+              Support
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="glass-card mission-card">
+          <h4 class="mission-title">Wildlife Monitoring</h4>
+          <p class="mission-goal">Deploy 5,000 camera traps</p>
+          <div class="mission-progress-header">
+            <span class="mission-raised">$1.8M</span>
+            <span class="mission-target">$2M</span>
+          </div>
+          <div class="mission-progress-bar">
+            <div class="mission-progress-fill" style="width: 92%"></div>
+          </div>
+          <div class="mission-footer">
+            <span class="mission-percent">92% funded</span>
+            <a href="#" class="mission-link">
+              Support
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="glass-card newsletter-card">
+        <div class="newsletter-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+        </div>
+        <h3 class="newsletter-title">Stay Updated</h3>
+        <p class="newsletter-desc">Get weekly insights on environmental data, AI breakthroughs, and opportunities to make an impact.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
+          <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p class="newsletter-note">Join 50,000+ subscribers. Unsubscribe anytime.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section data-grid">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Our Story</span>
+        <h2 class="section-title">About EcoPulse</h2>
+        <p class="section-subtitle">Built at the intersection of artificial intelligence and environmental science, EcoPulse represents a new approach to understanding and protecting our planet.</p>
+      </div>
+      
+      <!-- Quote Card -->
+      <div class="glass-card quote-card">
+        <p class="quote-text">"We believe that <span class="text-primary">data</span> is the most powerful tool for <span class="text-accent">environmental protection</span>. Our mission is to make Earth's vital signs visible, understandable, and actionable."</p>
+        <p class="quote-author">— EcoPulse Founding Principle</p>
+      </div>
+      
+      <!-- Values -->
+      <div class="values-grid">
+        <div class="glass-card value-card">
+          <div class="value-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <circle cx="12" cy="12" r="6"/>
+              <circle cx="12" cy="12" r="2"/>
+            </svg>
+          </div>
+          <h4 class="value-title">Mission-Driven</h4>
+          <p class="value-desc">Every line of code, every model we train, every sensor we deploy serves one purpose: protecting Earth's ecosystems.</p>
+        </div>
+        
+        <div class="glass-card value-card">
+          <div class="value-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </div>
+          <h4 class="value-title">Transparency</h4>
+          <p class="value-desc">Our data, methodologies, and algorithms are open for scrutiny. Science works best when it's reproducible.</p>
+        </div>
+        
+        <div class="glass-card value-card">
+          <div class="value-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+          <h4 class="value-title">Collaboration</h4>
+          <p class="value-desc">Environmental challenges require collective action. We partner with researchers, governments, and communities worldwide.</p>
+        </div>
+        
+        <div class="glass-card value-card">
+          <div class="value-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <h4 class="value-title">Innovation</h4>
+          <p class="value-desc">We push the boundaries of what AI can do for environmental science, developing novel solutions for unprecedented challenges.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="visualization-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge">Conceptual Model</span>
+      <h2 class="section-title">The Living Earth</h2>
+      <p class="section-subtitle">
+        A visual representation of continuous environmental sensing and AI-driven interpretation
+      </p>
+    </div>
+
+    <div class="earth-visual">
+      <div class="earth-core"></div>
+      <div class="earth-ring"></div>
+      <div class="earth-ring"></div>
+      <div class="earth-ring"></div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Developer Section -->
+  <section class="developer-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">The Developer</span>
+        <h2 class="section-title">Meet the Creator</h2>
+        <p class="section-subtitle">The mind behind EcoPulse</p>
+      </div>
+      
+      <div class="glass-card developer-card">
+        <div class="developer-content">
+          <div class="developer-avatar">
+            <div class="developer-avatar">
+            <img src="ME-removebg png.png" alt="Founder & Lead Developer">
+              </div>
+
+          </div>
+          <div class="developer-info">
+            <h3 class="developer-name">Ikjot Singh</h3>
+            <p class="developer-role">Founder & Lead Developer</p>
+            <p class="developer-bio">A passionate Computer Science student specializing in Artificial Intelligence and Machine Learning, driven by the belief that technology can and should be used to solve humanity's greatest challenges.</p>
+            <div class="ai-credit">
+  <span class="ai-badge">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M12 2a9 9 0 0 0-9 9c0 3.6 2.4 6.6 6 7.7V22l3-3 3 3v-3.3c3.6-1.1 6-4.1 6-7.7a9 9 0 0 0-9-9z"/>
+    </svg>
+    AI-Augmented Build
+  </span>
+
+  <p class="ai-credit-text">
+    This platform was designed and developed through <strong>human creativity</strong> enhanced by
+    <strong>AI-assisted tools</strong> for ideation, UI refinement, and rapid prototyping.
+  </p>
+</div>
+
+            <div class="developer-socials">
+              <a href="#" class="social-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                </svg>
+              </a>
+              <a href="#" class="social-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                  <rect x="2" y="9" width="4" height="12"/>
+                  <circle cx="4" cy="4" r="2"/>
+                </svg>
+              </a>
+              <a href="#" class="social-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="developer-skills">
+          <h4>Technical Expertise</h4>
+          <div class="skills-list">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">Computer Vision</span>
+            <span class="skill-tag">NLP</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">Docker</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="contact-section">
+    <div class="container">
+      <h2 class="contact-title">Want to Collaborate?</h2>
+      <p class="contact-desc">Whether you're a researcher, organization, or fellow developer interested in environmental tech, I'd love to hear from you.</p>
+      <a href="mailto:contact@ecopulse.earth" class="btn btn-primary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+        Get in Touch
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--primary)">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+            <span>ECO<span class="text-primary">PULSE</span></span>
+          </a>
+          <p class="footer-desc">The Earth's digital twin. Monitoring our planet's vital signs through AI and data science.</p>
+          <div class="footer-socials">
+            <a href="#">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+              </svg>
+            </a>
+            <a href="#">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+              </svg>
+            </a>
+            <a href="#">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+            <a href="#">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#vitals">Earth Vitals</a>
+            <a href="#ai">AI & Nature</a>
+            <a href="#action">Action Hub</a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="footer-title">Resources</h4>
+          <div class="footer-links">
+            <a href="#">Documentation</a>
+            <a href="#">API Reference</a>
+            <a href="#">Research Papers</a>
+            <a href="#">Data Sources</a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <div class="footer-links">
+            <a href="#about">About Us</a>
+            <a href="#">Press Kit</a>
+            <a href="#">Careers</a>
+            <a href="#">Support</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2024 EcoPulse. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+      const mobileNav = document.getElementById('mobileNav');
+      mobileNav.classList.toggle('active');
+    }
+
+    function closeMobileMenu() {
+      const mobileNav = document.getElementById('mobileNav');
+      mobileNav.classList.remove('active');
+    }
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (scrollY >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.glass-card').forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
+      card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(card);
+    });
+  </script>
+</body>
+</html>
